@@ -7,15 +7,16 @@ namespace NumericSequenceCalculator.Models
 {
     public class SequenceModel
     {
+        
         public int Number { get; set; }
 
-        public List<int> AllNumberSequence { get; set; }
+        public List<string> AllNumberSequence { get; set; }
 
-        public List<int> OddNumberSequence { get; set; }
+        public List<string> OddNumberSequence { get; set; }
 
-        public List<int> EvenNumberSequence { get; set; }
+        public List<string> EvenNumberSequence { get; set; }
 
-        public List<int> FibonacciNumberSequence { get; set; }
+        public List<string> FibonacciNumberSequence { get; set; }
 
     }
 }

@@ -25,11 +25,19 @@ namespace NumericSequenceCalculator.Service
         /// <returns>boolean</returns>
         public bool IdentifyNumber(string number)
         {
-            int NumberType = _sequence.IdentifyNumber(Convert.ToInt32(number));
-            if (NumberType == 1)
-                return true;
-            else
-                return false;
+            try
+            {
+                int NumberType = _sequence.IdentifyNumber(Convert.ToInt32(number));
+                if (NumberType == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
         /// <summary>
@@ -37,17 +45,29 @@ namespace NumericSequenceCalculator.Service
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        public SequenceModel GenerateSequences(string number)
+        public SequenceModel GenerateSequences(int number)
         {
-            SequenceModel sequenceModel = new SequenceModel();
+            try
+            {
+                SequenceModel sequenceModel = new SequenceModel();
+                sequenceModel.Number = number;
+                sequenceModel.AllNumberSequence = _sequence.GetAllNumbers(number).ToList();
+                sequenceModel.EvenNumberSequence = _sequence.GetEvenNumbers(number).ToList();
+                sequenceModel.OddNumberSequence = _sequence.GetOddNumbers(number).ToList();
+                sequenceModel.FibonacciNumberSequence = _sequence.GetFibonacciNumbers(number).ToList();
 
-            return sequenceModel;
+                return sequenceModel;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 
     public interface ISequenceService
     {
-        SequenceModel GenerateSequences(string number);
+        SequenceModel GenerateSequences(int number);
         bool IdentifyNumber(string number);
     }
 }

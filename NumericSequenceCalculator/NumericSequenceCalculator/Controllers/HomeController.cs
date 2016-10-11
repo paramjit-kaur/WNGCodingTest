@@ -29,13 +29,14 @@ namespace NumericSequenceCalculator.Controllers
         [HttpPost]
         public ActionResult NumberResult(int id = 0)
         {
-            string number = Request.Form["TextboxNumber"].ToString();
+            string number = Request.Form["Number"].ToString();
 
             if (!string.IsNullOrEmpty(number))
             {
                 if (sequenceService.IdentifyNumber(number))
                 {
-                    SequenceModel sequences = sequenceService.GenerateSequences(number);
+                    SequenceModel sequences = sequenceService.GenerateSequences(Convert.ToInt32(number));
+                    return View("Index", sequences);
                 }
                 else
                 {

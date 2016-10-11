@@ -1,8 +1,9 @@
 using System.Web.Mvc;
-using Microsoft.Practices.Unity;
-using Unity.Mvc3;
 using NumericSequenceCalculator.Models;
 using NumericSequenceCalculator.Service;
+using Microsoft.Practices.Unity;
+using Unity.Mvc3;
+using NumericSequenceCalculator.Controllers;
 
 namespace NumericSequenceCalculator
 {
@@ -19,13 +20,10 @@ namespace NumericSequenceCalculator
         {
             var container = new UnityContainer();
 
-            // register all your components with the container here
-            // it is NOT necessary to register your controllers
-
-            // e.g. container.RegisterType<ITestService, TestService>();            
-
-            container.RegisterType<ISequenceService, SequenceService>();
-
+            container.RegisterType<ISequence, Sequence>(new TransientLifetimeManager());           
+            container.RegisterType<ISequenceService, SequenceService>(new TransientLifetimeManager());
+            container.RegisterType<IController, HomeController>(new TransientLifetimeManager());
+            
             return container;
         }
     }
