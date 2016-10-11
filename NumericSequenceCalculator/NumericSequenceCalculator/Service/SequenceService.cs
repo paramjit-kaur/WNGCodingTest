@@ -27,17 +27,41 @@ namespace NumericSequenceCalculator.Service
         {
             try
             {
-                int NumberType = _sequence.IdentifyNumber(Convert.ToInt32(number));
-                if (NumberType == 1)
-                    return true;
-                else
-                    return false;
+                if (!IsDecimalNumber(number))
+                {
+                    int NumberType = _sequence.IdentifyNumber(Convert.ToInt32(number));
+                    if (NumberType == 1)
+                        return true;
+                    else
+                        return false;
+                }
+                return false;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
 
+        }
+
+        public bool IsDecimalNumber(string number)
+        {
+            if (number.Contains('.'))
+            {
+                return true;
+            }
+            else return false;
+        }
+
+        public bool IsZeroNumber(string number)
+        {
+            if (!IsDecimalNumber(number))
+            {
+                if (Convert.ToInt32(number) == 0)
+                    return true;
+                else return false;
+            }
+            else return false;
         }
 
         /// <summary>
@@ -69,5 +93,7 @@ namespace NumericSequenceCalculator.Service
     {
         SequenceModel GenerateSequences(int number);
         bool IdentifyNumber(string number);
+        bool IsDecimalNumber(string number);
+        bool IsZeroNumber(string number);
     }
 }

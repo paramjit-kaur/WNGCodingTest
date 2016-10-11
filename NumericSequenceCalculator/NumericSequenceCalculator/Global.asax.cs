@@ -25,6 +25,7 @@ namespace NumericSequenceCalculator
             Bootstrapper.Initialise();
             //Register our custom controller factory
             ControllerBuilder.Current.SetControllerFactory(typeof(DefaultControllerFactory));
+            //ModelBinders.Binders.DefaultBinder = new Microsoft.Web.Mvc.DataAnnotations.DataAnnotationsModelBinder();
 
         }
     }

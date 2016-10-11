@@ -29,18 +29,39 @@ namespace NumericSequenceCalculator.Controllers
         [HttpPost]
         public ActionResult NumberResult(int id = 0)
         {
-            string number = Request.Form["Number"].ToString();
-
-            if (!string.IsNullOrEmpty(number))
+            if (ModelState.IsValid)
             {
-                if (sequenceService.IdentifyNumber(number))
+                TempData["message"] = "";
+                string number = Request.Form["Number"].ToString();
+
+                if (!string.IsNullOrEmpty(number))
                 {
-                    SequenceModel sequences = sequenceService.GenerateSequences(Convert.ToInt32(number));
-                    return View("Index", sequences);
-                }
-                else
-                {
-                    return View("Index");
+                    if (!sequenceService.IsDecimalNumber(number))
+                    {
+                        if (!sequenceService.IsZeroNumber(number))
+                        {
+                            if (sequenceService.IdentifyNumber(number))
+                            {
+                                SequenceModel sequences = sequenceService.GenerateSequences(Convert.ToInt32(number));
+                                return View("Index", sequences);
+                            }
+                            else
+                            {
+                                TempData["message"] = "Please enter a positive whole number.";
+                                return View("Index");
+                            }
+                        }
+                        else
+                        {
+                            TempData["message"] = "Please enter another number except 0 to obtain the series.";
+                            return View("Index");
+                        }
+                    }
+                    else
+                    {
+                        TempData["message"] = "Please do not enter a decimal number.";
+                        return View("Index");
+                    }
                 }
             }
 
@@ -50,6 +71,7 @@ namespace NumericSequenceCalculator.Controllers
 
         public ActionResult ResetFields()
         {
+            TempData["message"] = "";
             return View("Index");
         }
     }
