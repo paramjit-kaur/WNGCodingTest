@@ -1,0 +1,26 @@
+Story Name : Enter Data
+
+Value Statement : As a User, I want to enter a number and initiate the calculation of the numeric
+sequences
+so that I can view the results.
+
+
+Acceptance Criteria :
+
+Detect Input
+Validate blank input
+Validate for whole numbers only
+Generate error message for validations 
+Generate strings for entered number
+
+Defintion of Done :
+Passes regression tests
+Passes testing per acceptance criteria items
+Approved by WNG
+Able to give a Demo of work done
+
+
+Status : Defined
+Any Iterations : NA
+Plan Est : NA
+To Do : ( Hours )
