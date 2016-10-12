@@ -36,3 +36,5 @@ F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\D
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\obj\Debug\NumericSequenceCalculator.Tests.csprojResolveAssemblyReference.cache
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\obj\Debug\NumericSequenceCalculator.Tests.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\obj\Debug\NumericSequenceCalculator.Tests.pdb
+F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Rhino.Mocks.dll
+F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Rhino.Mocks.xml

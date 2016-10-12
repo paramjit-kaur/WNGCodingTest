@@ -11,18 +11,16 @@ namespace NumericSequenceCalculator.Service
 
         ISequence _sequence;
 
-
         public SequenceService(ISequence sequence)
         {
             _sequence = sequence;
-
         }
 
         /// <summary>
         /// Identify whether number is positive or negative.
         /// </summary>
         /// <param name="number"></param>
-        /// <returns>boolean</returns>
+        /// <returns>true/false</returns>
         public bool IdentifyNumber(string number)
         {
             try
@@ -41,9 +39,13 @@ namespace NumericSequenceCalculator.Service
             {
                 throw ex;
             }
-
         }
 
+        /// <summary>
+        /// Identify whether number is a decimal or whole number.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public bool IsDecimalNumber(string number)
         {
             if (number.Contains('.'))
@@ -53,6 +55,11 @@ namespace NumericSequenceCalculator.Service
             else return false;
         }
 
+        /// <summary>
+        /// Identify whether number is zero or not.
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns>true/false</returns>
         public bool IsZeroNumber(string number)
         {
             if (!IsDecimalNumber(number))
@@ -68,17 +75,25 @@ namespace NumericSequenceCalculator.Service
         /// Generate all the sequence for the number.
         /// </summary>
         /// <param name="number"></param>
-        /// <returns></returns>
-        public SequenceModel GenerateSequences(int number)
+        /// <returns>model object</returns>
+        public SequenceModel GenerateSequences(string number)
         {
             try
             {
-                SequenceModel sequenceModel = new SequenceModel();
-                sequenceModel.Number = number;
-                sequenceModel.AllNumberSequence = _sequence.GetAllNumbers(number).ToList();
-                sequenceModel.EvenNumberSequence = _sequence.GetEvenNumbers(number).ToList();
-                sequenceModel.OddNumberSequence = _sequence.GetOddNumbers(number).ToList();
-                sequenceModel.FibonacciNumberSequence = _sequence.GetFibonacciNumbers(number).ToList();
+                SequenceModel sequenceModel = new SequenceModel();//fill the sequence model object
+                sequenceModel.Number =Convert.ToInt32(number);
+
+                if (_sequence.GetAllNumbers(sequenceModel.Number).Count > 0)
+                    sequenceModel.AllNumberSequence = _sequence.GetAllNumbers(sequenceModel.Number).ToList();
+
+                if (_sequence.GetEvenNumbers(sequenceModel.Number).Count > 0)
+                    sequenceModel.EvenNumberSequence = _sequence.GetEvenNumbers(sequenceModel.Number).ToList();
+
+                if (_sequence.GetOddNumbers(sequenceModel.Number).Count > 0)
+                    sequenceModel.OddNumberSequence = _sequence.GetOddNumbers(sequenceModel.Number).ToList();
+
+                if (_sequence.GetFibonacciNumbers(sequenceModel.Number).Count > 0)
+                    sequenceModel.FibonacciNumberSequence = _sequence.GetFibonacciNumbers(sequenceModel.Number).ToList();
 
                 return sequenceModel;
             }
@@ -91,7 +106,7 @@ namespace NumericSequenceCalculator.Service
 
     public interface ISequenceService
     {
-        SequenceModel GenerateSequences(int number);
+        SequenceModel GenerateSequences(string number);
         bool IdentifyNumber(string number);
         bool IsDecimalNumber(string number);
         bool IsZeroNumber(string number);

@@ -14,9 +14,9 @@
 <div id="body">
     <section class="featured">
         <div class="content-wrapper">
-            @using (Html.BeginForm("NumberResult", "Home"))
+            @using (Html.BeginForm("Index", "Home"))
             {@Html.ValidationSummary(true)
-               <span style="color:red"> <b>@TempData["message"]</b></span><br />
+                <span style="color: red"><b>@TempData["message"]</b></span><br />
                 @Html.ValidationMessageFor(m => m.Number)<br />
                 @Html.Label("Enter a Number:")
                 @Html.TextBoxFor(m => m.Number)<br />
@@ -47,21 +47,23 @@
 
                     }
 
-                    @functions { 
-   
+                    @functions {   
                     
                         string GetModifiedString(List<string> sequenceList)//construct the data string
                         {
                             var allNumberString = string.Empty;
-                            for (int i = 0; i < sequenceList.Count; i++)//iterating through the list of sequence
+                            if (sequenceList != null)
                             {
-                                if (i < sequenceList.Count - 1)
+                                for (int i = 0; i < sequenceList.Count; i++)//iterating through the list of sequence
                                 {
-                                    allNumberString = allNumberString + string.Format(sequenceList[i] + ", ");//adding commas at the end till (n-1) number
-                                }
-                                else
-                                {
-                                    allNumberString = allNumberString + sequenceList[i];
+                                    if (i < sequenceList.Count - 1)
+                                    {
+                                        allNumberString = allNumberString + string.Format(sequenceList[i] + ", ");//adding commas at the end till (n-1) number
+                                    }
+                                    else
+                                    {
+                                        allNumberString = allNumberString + sequenceList[i];
+                                    }
                                 }
                             }
                             return allNumberString;
