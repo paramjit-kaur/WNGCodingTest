@@ -25,6 +25,5 @@ F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator\bin\System.
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator\bin\System.Web.Razor.xml
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator\bin\EntityFramework.xml
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator\bin\System.Web.Http.WebHost.xml
-F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator\obj\Debug\NumericSequenceCalculator.csprojResolveAssemblyReference.cache
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator\obj\Debug\NumericSequenceCalculator.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator\obj\Debug\NumericSequenceCalculator.pdb

@@ -4,6 +4,7 @@ F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\D
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Newtonsoft.Json.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\NumericSequenceCalculator.dll
+F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Rhino.Mocks.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\System.Net.Http.Formatting.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\System.Web.Helpers.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\System.Web.Http.dll
@@ -20,6 +21,7 @@ F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\D
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Antlr3.Runtime.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\NumericSequenceCalculator.pdb
+F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Rhino.Mocks.xml
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Newtonsoft.Json.xml
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\System.Net.Http.Formatting.xml
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\System.Web.Helpers.xml
@@ -36,5 +38,3 @@ F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\D
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\obj\Debug\NumericSequenceCalculator.Tests.csprojResolveAssemblyReference.cache
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\obj\Debug\NumericSequenceCalculator.Tests.dll
 F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\obj\Debug\NumericSequenceCalculator.Tests.pdb
-F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Rhino.Mocks.dll
-F:\WNGCodingTest\NumericSequenceCalculator\NumericSequenceCalculator.Tests\bin\Debug\Rhino.Mocks.xml

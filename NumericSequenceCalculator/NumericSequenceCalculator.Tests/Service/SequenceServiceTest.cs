@@ -13,6 +13,8 @@ namespace NumericSequenceCalculator.Tests.Service
     [TestClass]
     public class SequenceServiceTest
     {
-      
+       
+
+
     }
 }
